@@ -22,8 +22,11 @@ struct ContentView: View {
                     Spacer()
                     Text(viewModel.value)
                         .bold()
-                        .font(.custom("AtkinsonHyperlegible-Bold", size: 100))
+                        .font(.custom("AtkinsonHyperlegible-Bold", size: viewModel.value.count > 8 ? 40 : 80))
                         .foregroundColor(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                    
                 }
                 .padding()
                 
@@ -50,6 +53,9 @@ struct ContentView: View {
                     .padding(.bottom, 3)
                 }
             }
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Erreur"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
         }
     }
 }

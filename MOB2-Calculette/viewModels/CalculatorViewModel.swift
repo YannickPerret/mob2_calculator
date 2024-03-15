@@ -12,6 +12,9 @@ class CalculatorViewModel: ObservableObject {
     @Published var value = "0"
     @Published var history: [CalculatorOperation] = []
     
+    @Published var showAlert = false
+    @Published var errorMessage = ""
+    
     private var currentOperation: Operation = .none
     
     private var runningNumber = 0.0
@@ -86,7 +89,14 @@ class CalculatorViewModel: ObservableObject {
                 value = button.rawValue
                 userIsInTheMiddleOfTyping = true
             } else {
-                value = "\(value)\(button.rawValue)"
+                if value.count < 15 {
+                    value = "\(value)\(button.rawValue)"
+                }
+                else {
+                    errorMessage = "Impossible de mettre plus de 15 chiffres"
+                    showAlert = true
+                    return
+                }
             }
         }
     }
