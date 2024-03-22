@@ -15,29 +15,33 @@ La calculatrice a été développer avec la version 15.3 de Xcode et IOS 17.2.
 - Limitation à 15 chiffres pour la saisie.
 - Ajustement automatique de la taille de la police pour les grands nombres.
 
+Voici votre documentation adaptée pour refléter le nouveau flux de données, y compris l'intégration du formateur de nombres personnalisé :
+
 ## Architecture MVVM
 
-Cette application est conçue en suivant le modèle d'architecture MVVM (Model-View-ViewModel), qui aide à séparer la logique métier de l'interface utilisateur, facilitant ainsi la maintenance et le test du code.
+L'application de calculatrice est structurée selon le modèle MVVM (Model-View-ViewModel), favorisant la séparation de la logique métier de l'interface utilisateur et améliorant ainsi la maintenabilité et la testabilité du code.
 
 ### Composants de l'architecture :
 
-- **Model** : Définit les données et la logique métier de l'application. Dans ce projet, les modèles incluent `CalculatorOperation` qui représente une opération de calcul.
+- **Model** : Comprend des éléments comme `CalculatorOperation` qui définissent les données et la logique métier. Le modèle `Calculator` effectue les calculs et détermine les résultats des opérations.
 
-- **View** : La couche View affiche l'interface utilisateur et réagit aux interactions de l'utilisateur. Elle est définie par `ContentView`, qui utilise les données fournies par le ViewModel pour afficher l'état actuel de la calculatrice.
+- **View** : `ContentView` représente la couche View, affichant l'interface utilisateur et réagissant aux interactions. Elle observe le ViewModel pour se mettre à jour en fonction de l'état actuel de la calculatrice.
 
-- **ViewModel** : `CalculatorViewModel` agit comme un intermédiaire entre le Model et la View. Il traite la logique métier et les interactions de l'utilisateur, mettant à jour l'état de l'application sans être directement lié à la couche View. Le ViewModel réagit aux actions de l'utilisateur, met à jour le modèle et modifie ses propres propriétés observables, déclenchant ainsi des mises à jour de l'interface utilisateur.
+- **ViewModel** : `CalculatorViewModel` sert de lien entre la View et le Model. Il gère les interactions de l'utilisateur, exécute la logique métier via le Model, et met à jour ses propriétés observables pour refléter les changements dans la View.
 
 ### Flux de données :
 
-1. **Utilisateur Interagit avec la View** : L'utilisateur interagit avec `ContentView`, déclenchant des actions telles que l'entrée de chiffres ou la sélection d'opérations.
+1. **Interaction de l'Utilisateur avec la View** : L'utilisateur interagit avec `ContentView`, qui capture les actions comme l'entrée de chiffres ou la sélection d'opérations.
 
-2. **View Déclenche des Actions sur le ViewModel** : `ContentView` communique avec `CalculatorViewModel` pour informer des actions de l'utilisateur.
+2. **La View Informe le ViewModel** : `ContentView` transmet les actions de l'utilisateur à `CalculatorViewModel`.
 
-3. **ViewModel Met à Jour le Model** : Le `CalculatorViewModel` exécute la logique métier en fonction des actions de l'utilisateur, mettant à jour les données dans `CalculatorOperation` si nécessaire.
+3. **Le ViewModel Traite la Logique Métier** : `CalculatorViewModel` traite les actions, interagit avec `Calculator` pour les calculs nécessaires et utilise `NumberFormatter` pour formater les résultats.
 
-4. **ViewModel Met à Jour la View** : Le `CalculatorViewModel` met à jour ses propriétés @Published, ce qui, grâce à la liaison de données de SwiftUI, met à jour automatiquement l'interface utilisateur dans `ContentView`.
+4. **Mise à Jour du ViewModel et Réflexion dans la View** : Le `CalculatorViewModel` met à jour ses propriétés `@Published`, et grâce à la liaison de données, `ContentView` reflète ces changements, actualisant l'affichage pour l'utilisateur.
 
-Cette séparation des préoccupations rend le code plus modulaire, plus facile à comprendre et à tester, et améliore la réactivité de l'application en déléguant la logique métier à des composants spécialisés.
+5. **Formatage des Nombres** : `NumberFormatter` est utilisé pour arrondir et formater les nombres, assurant que les résultats sont affichés de manière appropriée (par exemple, arrondissant à 5 chiffres après la virgule et évitant l'affichage de zéros superflus).
+
+Cette structure MVVM facilite la gestion et l'évolution de l'application en isolant la logique métier et en permettant à la View de rester simple et concentrée sur la présentation.
 
 ## Installation
 

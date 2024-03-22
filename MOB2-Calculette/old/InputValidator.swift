@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct InputValidator {
+struct IsnputValidator {
     static func isValidDecimalInput(_ input: String) -> Bool {
         return !input.contains(".")
     }

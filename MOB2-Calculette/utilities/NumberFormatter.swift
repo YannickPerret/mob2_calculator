@@ -9,9 +9,9 @@ import Foundation
 
 struct NumberFormatter {
     static func formatNumber(_ number: Double) -> String {
-        let roundedNumber = number.round(to: 3) 
+        let roundedNumber = number.round(to: 5)
         if roundedNumber.truncatingRemainder(dividingBy: 1) == 0 {
-            return "\(Int(roundedNumber))"
+            return "\(Int(roundedNumber))" 
         } else {
             return String(roundedNumber).trimmingTrailingZeros()
         }
