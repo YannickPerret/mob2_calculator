@@ -2,14 +2,15 @@
 
 ## Introduction
 
-Cette application est une calculatrice simple développée avec SwiftUI. Elle permet d'effectuer des opérations arithmétiques de base telles que l'addition, la soustraction, la multiplication et la division. Elle propose également une interface utilisateur intuitive et réactive adaptée à tous les appareils iOS.
+Cette application est une calculatrice simple développée avec SwiftUI sous l'architecture MVVM. Elle permet d'effectuer des opérations arithmétiques de base telles que l'addition, la soustraction, la multiplication et la division. Elle propose également une interface utilisateur intuitive et réactive adaptée à tous les appareils iOS.
+
+La calculatrice a été développer avec la version 15.3 de Xcode et IOS 17.2.
 
 ## Fonctionnalités
 
-- Opérations arithmétiques de base : addition, soustraction, multiplication, division.
+- Opérations arithmétiques de base : addition, soustraction, multiplication, division, pourcentage.
 - Supporte la saisie de nombres décimaux.
 - Capacité de changer le signe d'un nombre (positif/négatif).
-- Affiche l'historique des opérations effectuées.
 - Répétition de la dernière opération en appuyant sur `=`.
 - Limitation à 15 chiffres pour la saisie.
 - Ajustement automatique de la taille de la police pour les grands nombres.
@@ -72,6 +73,6 @@ Pour créer un build de l'application :
 Si vous souhaitez contribuer à ce projet, n'hésitez pas à créer une pull request ou à ouvrir un issue pour discuter des modifications ou ajouts que vous proposez.
 
 ## Licence
-Ce projet est sous licence MIT. Pour plus d'informations, veuez consulter le fichier [https://github.com/YannickPerret/mob2_calculator/blob/3dd6fe87b397d1d6045230fe6251abd4e7b5bb8b/LICENSE](LICENSE).
+Ce projet est sous licence MIT. Pour plus d'informations, veuez consulter le fichier [LICENSE](https://github.com/YannickPerret/mob2_calculator/blob/3dd6fe87b397d1d6045230fe6251abd4e7b5bb8b/LICENSE).
 
 ---
