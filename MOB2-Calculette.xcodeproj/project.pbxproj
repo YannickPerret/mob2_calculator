@@ -20,6 +20,7 @@
 		124C2E5E2BA47FBA0001634C /* AtkinsonHyperlegible-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124C2E5A2BA47FBA0001634C /* AtkinsonHyperlegible-Bold.ttf */; };
 		124C2E5F2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124C2E5B2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf */; };
 		124C2E622BA486070001634C /* CalculatorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C2E612BA486070001634C /* CalculatorOperation.swift */; };
+		125BD9112BAD9A8D00055230 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BD9102BAD9A8D00055230 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		124C2E5B2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AtkinsonHyperlegible-Regular.ttf"; path = "../../../../../../../Downloads/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf"; sourceTree = "<group>"; };
 		124C2E602BA4803F0001634C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		124C2E612BA486070001634C /* CalculatorOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOperation.swift; sourceTree = "<group>"; };
+		125BD9102BAD9A8D00055230 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 			children = (
 				124C2E602BA4803F0001634C /* Info.plist */,
 				124C2E522BA47EA20001634C /* assets */,
-				124C2E4D2BA47AF10001634C /* utilies */,
+				124C2E4D2BA47AF10001634C /* utilities */,
 				124C2E462BA45F400001634C /* viewModels */,
 				124C2E452BA45F330001634C /* views */,
 				124C2E442BA45F290001634C /* models */,
@@ -116,13 +118,14 @@
 			path = viewModels;
 			sourceTree = "<group>";
 		};
-		124C2E4D2BA47AF10001634C /* utilies */ = {
+		124C2E4D2BA47AF10001634C /* utilities */ = {
 			isa = PBXGroup;
 			children = (
 				124C2E4E2BA47B020001634C /* NumberFormatter.swift */,
 				124C2E502BA47B280001634C /* InputValidator.swift */,
+				125BD9102BAD9A8D00055230 /* extension.swift */,
 			);
-			path = utilies;
+			path = utilities;
 			sourceTree = "<group>";
 		};
 		124C2E522BA47EA20001634C /* assets */ = {
@@ -225,6 +228,7 @@
 				124C2E4C2BA4606B0001634C /* CalculatorViewModel.swift in Sources */,
 				124C2E482BA45FDF0001634C /* CalculatorEnums.swift in Sources */,
 				124C2E622BA486070001634C /* CalculatorOperation.swift in Sources */,
+				125BD9112BAD9A8D00055230 /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
