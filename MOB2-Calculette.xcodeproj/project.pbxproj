@@ -20,6 +20,7 @@
 		124C2E5E2BA47FBA0001634C /* AtkinsonHyperlegible-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124C2E5A2BA47FBA0001634C /* AtkinsonHyperlegible-Bold.ttf */; };
 		124C2E5F2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124C2E5B2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf */; };
 		124C2E622BA486070001634C /* CalculatorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C2E612BA486070001634C /* CalculatorOperation.swift */; };
+		124CD0882BADBFE600D66D9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 124CD0872BADBFE600D66D9B /* README.md */; };
 		125BD9112BAD9A8D00055230 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BD9102BAD9A8D00055230 /* extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		124C2E5B2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AtkinsonHyperlegible-Regular.ttf"; path = "../../../../../../../Downloads/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf"; sourceTree = "<group>"; };
 		124C2E602BA4803F0001634C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		124C2E612BA486070001634C /* CalculatorOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOperation.swift; sourceTree = "<group>"; };
+		124CD0872BADBFE600D66D9B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		125BD9102BAD9A8D00055230 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +58,7 @@
 		124C2E292BA45D200001634C = {
 			isa = PBXGroup;
 			children = (
+				124CD0872BADBFE600D66D9B /* README.md */,
 				124C2E342BA45D200001634C /* MOB2-Calculette */,
 				124C2E332BA45D200001634C /* Products */,
 			);
@@ -208,6 +211,7 @@
 				124C2E5C2BA47FBA0001634C /* AtkinsonHyperlegible-Italic.ttf in Resources */,
 				124C2E3D2BA45D220001634C /* Preview Assets.xcassets in Resources */,
 				124C2E5D2BA47FBA0001634C /* AtkinsonHyperlegible-BoldItalic.ttf in Resources */,
+				124CD0882BADBFE600D66D9B /* README.md in Resources */,
 				124C2E3A2BA45D220001634C /* Assets.xcassets in Resources */,
 				124C2E5F2BA47FBA0001634C /* AtkinsonHyperlegible-Regular.ttf in Resources */,
 				124C2E5E2BA47FBA0001634C /* AtkinsonHyperlegible-Bold.ttf in Resources */,
